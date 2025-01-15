@@ -8,11 +8,7 @@ import imageRouter from './routes/imageRoutes.js';
 const PORT = process.env.PORT || 4000;
 const app = express();
 
-const allowedOrigins = ['https://imagify-frontend-itws.onrender.com']; 
-app.use(cors({
-    origin: allowedOrigins,
-    credentials: true,
-}));
+app.use(cors());
 
 app.use(express.json());
 await connectDB();
