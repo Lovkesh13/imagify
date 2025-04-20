@@ -20,7 +20,7 @@ const registerUser = async (req, res) => {
             name,
             email,
             password: hashedPassword,
-            creditBalance: 0  // Optional: to override schema default
+            creditBalance: 5  // Optional: to override schema default
         };
 
         const newUser = new userModel(userData);
